@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+       
+    <div class = "piano-all-keys">
+
+      
+        <h1 id = "chordGenerator">Chord Generator</h1>
+        <p id = "paragraph">
+            This chord generator generates a sound once the key is pressed. A chord 
+            is typically three or more keys sounding at the same time. Create chords 
+            by pressing keys and press the stop generating to stop the sound creating 
+            a new chord! Generate your first chord by pressing C - E - G - B together. 
+        </p>
+
+
+        <div class = "natural-notes">
+
+            <script src = "index.js"></script>
+
+            <button type = "button" onclick="Playnote('C')">C</button>
+            <button type = "button" onclick="Playnote('D')">D</button>
+            <button type = "button" onclick="Playnote('E')">E</button>
+            <button type = "button" onclick="Playnote('F')">F</button>
+            <button type = "button" onclick="Playnote('G')">G</button>
+            <button type = "button" onclick="Playnote('A')">A</button>
+            <button type = "button" onclick="Playnote('B')">B</button>
+            <button type = "button" onclick="Playnote('C2')">C</button>
+
+            <div class = "accidental-notes">
+                <div class = "accidentals-group1">
+                    <button type = "button" onclick="Playnote('C#')">C#</button>
+                    <button type = "button" onclick="Playnote('D#')">D#</button>
+                </div>
+                
+    
+                <div class = "accidentals-group2">
+                    <button type = "button" onclick="Playnote('F#')">F#</button>
+                    <button type = "button" onclick="Playnote('G#')">G#</button>
+                    <button type = "button" onclick="Playnote('A#')">A#</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div> 
+
+    <div>
+        <button id = "stopButton"type ="button" onclick="Stopnote()">Stop Generating</button>
+
+        <form id="volumeSliderItems">
+            <label for="volumeRange">Volume:</label>
+            <input id="volumeRange" type="range" min="0" max="100" value="50" class="slider">
+        </form>
+        
+    </div>
+
+    
+</body>
+</html>
